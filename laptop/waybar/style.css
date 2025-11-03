@@ -105,6 +105,27 @@ window#waybar.empty #window {
 	color: #FFFFFF;
 }
 
+#battery {
+	padding: 0.3rem 0.6rem;
+	margin: 0.4rem 0.25rem;
+	border-radius: 6px;
+	background-color: #1e1e2e;
+	color: #ffffff;
+}
+
+/* Optional state colors */
+#battery.warning {
+	color: #f9e2af;
+}
+
+#battery.critical {
+	color: #f38ba8;
+}
+
+#battery.charging {
+	color: #a6e3a1;
+}
+
 #custom-power {
 	color: #f38ba8;
 }
