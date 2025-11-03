@@ -16,6 +16,7 @@
     "pulseaudio",
     "tray",
     "custom/notification",
+    "battery",
     "custom/power",
   ],
   "custom/spotify": {
@@ -96,6 +97,19 @@
     "format": "|",
     "tooltip": false,
   },
+    "battery": {
+    "interval": 15,
+    "states": {
+    "warning": 25,
+    "critical": 10
+  },
+  "format": "{capacity}% {icon}",
+  "format-charging": "{capacity}% ",
+  "format-plugged": "{capacity}% ",
+  "format-alt": "{time} {icon}",
+  "format-icons": ["", "", "", "", ""],
+  "tooltip": true
+},
   "custom/power": {
     "tooltip": false,
     "on-click": "wlogout -p layer-shell &",
