@@ -82,7 +82,7 @@
   "temperature": {
   	"interval": 5,
   	"hwmon-path": "/sys/class/hwmon/hwmon0/temp2_input",
-  	"format": "🌡 {temperatureC}°C"
+  	"format": "{temperatureC}°C "
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
