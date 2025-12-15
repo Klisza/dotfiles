@@ -53,6 +53,9 @@ export NVM_DIR="$HOME/.nvm"
 # flutter path
 export PATH="/usr/bin/flutter/bin:$PATH"
 
+# mpc
+export MPD_HOST=/home/kuba/.mpd/socket
+
 # colored ls/grep/less with ~/.dir_colors
 eval "$(dircolors ~/.dir_colors)"
 
@@ -245,3 +248,25 @@ eval "$(zoxide init bash)"
 ############################################################################
 # End of ~/.bashrc
 ############################################################################
+export PATH="/usr/local/texlive/2025/bin/x86_64-linux:$PATH"
+export PATH="~/.local/bin:$PATH"
+
+declare -A pomo_options=(
+  [work]=45
+  [break]=10
+)
+
+pomodoro() {
+  local val="$1"
+
+  if [[ -n "$val" && -n "${pomo_options[$val]}" ]]; then
+    echo "$val" | lolcat
+    timer "${pomo_options[$val]}m"
+    spd-say "$val session done"
+  else
+    echo "Unknown pomodoro type: $val" >&2
+  fi
+}
+
+alias wo="pomodoro work"
+alias br="pomodoro break"

@@ -5,6 +5,7 @@
   "width": 1600,
   "spacing": 0,
   "exclusive": true,
+  "mode": "dock",
   "gtk-layer-shell": true,
   "passthrough": false,
   "fixed-center": true,
