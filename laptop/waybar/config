@@ -12,6 +12,7 @@
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "modules-center": ["clock", "clock#simpleclock"],
   "modules-right": [
+    "custom/wttr",
     "cpu",
     "temperature",
     "pulseaudio",
@@ -20,6 +21,12 @@
     "battery",
     "custom/power",
   ],
+  "custom/wttr": {
+    "exec": "curl -fsS --max-time 10 'https://wttr.in/?m&format=3'",
+    "interval": 600,
+    "format": "{text}",
+    "on-click": "xdg-open 'https://wttr.in/'"
+  },
   "custom/spotify": {
     "format": "  {}",
     "return-type": "json",
