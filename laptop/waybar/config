@@ -12,7 +12,7 @@
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "modules-center": ["clock", "clock#simpleclock"],
   "modules-right": [
-    "custom/wttr",
+    "custom/weather",
     "cpu",
     "temperature",
     "pulseaudio",
@@ -21,11 +21,12 @@
     "battery",
     "custom/power",
   ],
-  "custom/wttr": {
-    "exec": "curl -fsS --max-time 10 'https://wttr.in/?m&format=3'",
-    "interval": 600,
-    "format": "{text}",
-    "on-click": "xdg-open 'https://wttr.in/'"
+  "custom/weather": {
+    "format": "{}°",
+    "tooltip": true,
+    "interval": 3600,
+    "exec": "wttrbar",
+    "return-type": "json"
   },
   "custom/spotify": {
     "format": "  {}",
@@ -53,6 +54,9 @@
     "all-outputs": true,
     "disable-scroll": false,
     "active-only": false,
+    "persistent-workspaces": {
+      "*": [1,2,3]
+    }
   },
   "hyprland/window": {
     "format": "{title}",
@@ -80,7 +84,7 @@
       "mode-mon-col": 1,
       "on-scroll": 1,
     },
-    "tooltip-format": "<span color='#cdd6f4' font='Lexend 16'><tt><small>{calendar}</small></tt></span>",
+    "tooltip-format": "<span color='#cdd6f4' font='JetBrainsMono Nerd Font 16'><tt><small>{calendar}</small></tt></span>",
   },
   "cpu": {
     "format": " {usage}%",
@@ -94,10 +98,10 @@
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
-    "format-muted": "  muted",
+    "format-muted": " muted",
     "format-icons": {
       "headphone": "",
-      "default": [" ", " ", " "],
+      "default": ["", "", ""],
     },
     "on-click": "pavucontrol",
   },

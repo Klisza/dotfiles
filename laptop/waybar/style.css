@@ -43,7 +43,7 @@ window#waybar {
 #custom-logo,
 #custom-power,
 #custom-spotify,
-#custom-wttr,
+#custom-weather,
 #cpu,
 #temperature,
 #tray,
@@ -159,7 +159,7 @@ tooltip {
 #network.ethernet {
 	color: #a6e3a1; /* green-ish */
 }
-#custom-wttr {
+#custom-weather {
 	background-color: #1e1e2e;
 	color: #FFFFFF;
 }
