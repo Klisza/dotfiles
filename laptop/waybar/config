@@ -84,7 +84,7 @@
       "mode-mon-col": 1,
       "on-scroll": 1,
     },
-    "tooltip-format": "<span color='#cdd6f4' font='JetBrainsMono Nerd Font 16'><tt><small>{calendar}</small></tt></span>",
+    "tooltip-format": "<span color='#cdd6f4' font_desc='JetBrainsMono Nerd Font 16'><small>{calendar}</small></span>"
   },
   "cpu": {
     "format": " {usage}%",
