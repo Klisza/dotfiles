@@ -17,7 +17,7 @@
     "temperature",
     "pulseaudio",
     "tray",
-    "network",
+    //"network",
     "battery",
     "custom/power",
   ],
@@ -110,7 +110,7 @@
     "tooltip": false,
   },
   "network": {
-	"interface": "wlp2s0",
+	"interface": "wlan0",
 	"format": "{ifname}",
 	"format-wifi": "{essid} ({signalStrength}%) ",
 	"format-ethernet": "{ifname} ",
