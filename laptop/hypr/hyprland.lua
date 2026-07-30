@@ -50,6 +50,12 @@ hl.env("MPD_HOST", "/home/kuba/.mpd/socket")
 -----------------------
 ---- LOOK AND FEEL ----
 -----------------------
+hl.gesture({
+	fingers = 3,
+	direction = "horizontal",
+	action = "workspace",
+	scale = 1.5,
+})
 
 hl.config({
 	general = {
@@ -68,6 +74,12 @@ hl.config({
 		resize_on_border = false,
 		allow_tearing = false,
 		layout = "master",
+	},
+
+	gestures = {
+		workspace_swipe_distance = 250,
+		workspace_swipe_cancel_ratio = 0.3,
+		workspace_swipe_min_speed_to_force = 20,
 	},
 
 	decoration = {
@@ -159,7 +171,7 @@ hl.animation({ leaf = "layersIn", enabled = true, speed = 4, bezier = "easeOutQu
 hl.animation({ leaf = "layersOut", enabled = true, speed = 1.5, bezier = "linear", style = "fade" })
 hl.animation({ leaf = "fadeLayersIn", enabled = true, speed = 1.79, bezier = "almostLinear" })
 hl.animation({ leaf = "fadeLayersOut", enabled = true, speed = 1.39, bezier = "almostLinear" })
-hl.animation({ leaf = "workspaces", enabled = true, speed = 4, bezier = "easeOutQuint", style = "slide" })
+hl.animation({ leaf = "workspaces", enabled = true, speed = 3, bezier = "easeOutQuint", style = "slidefade 100%" })
 -- hl.animation({ leaf = "workspacesIn", enabled = true, speed = 1.21, bezier = "almostLinear", style = "fade" })
 -- hl.animation({ leaf = "workspacesOut", enabled = true, speed = 1.94, bezier = "almostLinear", style = "fade" })
 
