@@ -270,3 +270,7 @@ pomodoro() {
 
 alias wo="pomodoro work"
 alias br="pomodoro break"
+
+# >>> Codex installer >>>
+export PATH="/home/kuba/.local/bin:$PATH"
+# <<< Codex installer <<<
