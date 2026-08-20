@@ -50,6 +50,22 @@ hl.env("HYPRCURSOR_SIZE", "24")
 -----------------------
 ---- LOOK AND FEEL ----
 -----------------------
+hl.window_rule({
+	name = "limit-floating-1440p",
+	match = {
+		float = true,
+	},
+	max_size = { 2400, 1300 },
+})
+
+hl.window_rule({
+	name = "limit-floating-1080p",
+	match = {
+		float = true,
+		workspace = "2",
+	},
+	max_size = { 1860, 1020 },
+})
 
 hl.config({
 	general = {
@@ -74,7 +90,7 @@ hl.config({
 		rounding = 4,
 		rounding_power = 2,
 		active_opacity = 1.0,
-		inactive_opacity = 0.8,
+		inactive_opacity = 0.98,
 
 		shadow = {
 			enabled = true,
