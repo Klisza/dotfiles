@@ -2,7 +2,7 @@
 	min-height: 0;
 	min-width: 0;
 	font-family: "JetBrainsMono NFP", "Noto Color Emoji", "Noto Emoji", sans-serif;
-	font-size: 13px;
+	font-size: 10pt;
 	font-weight: 600;
 }
 
@@ -15,9 +15,9 @@ window#waybar {
 }
 
 #workspaces button {
-	padding: 0.3rem 0.6rem;
-	margin: 0.4rem 0.25rem;
-	border-radius: 6px;
+	padding: 0.1rem 0.5rem;
+	margin: 0.15rem 0.2rem;
+	border-radius: 6pt;
 	/* background-color: #181825; */
 	background-color: #1e1e2e;
 	color: #cdd6f4;
@@ -49,8 +49,8 @@ window#waybar {
 #tray,
 #window,
 #mpris {
-	padding: 0.3rem 0.6rem;
-	margin: 0.4rem 0.25rem;
+	padding: 0.1rem 0.5rem;
+	margin: 0.15rem 0.2rem;
 	border-radius: 6px;
 	/* background-color: #181825; */
 	background-color: #1e1e2e;
@@ -107,8 +107,8 @@ window#waybar.empty #window {
 }
 
 #battery {
-	padding: 0.3rem 0.6rem;
-	margin: 0.4rem 0.25rem;
+	padding: 0.1rem 0.5rem;
+	margin: 0.15rem 0.2rem;
 	border-radius: 6px;
 	background-color: #1e1e2e;
 	color: #ffffff;
@@ -139,8 +139,8 @@ tooltip {
 
 /* --- Network module --- */
 #network {
-	padding: 0.3rem 0.6rem;
-	margin: 0.4rem 0.25rem;
+	padding: 0.1rem 0.5rem;
+	margin: 0.15rem 0.2rem;
 	border-radius: 6px;
 	background-color: #1e1e2e;
 	color: #FFFFFF;

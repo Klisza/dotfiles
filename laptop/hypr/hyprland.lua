@@ -28,6 +28,13 @@ local menu = "tofi-drun --drun-launch=true"
 local browser = "librewolf"
 local mainMod = "SUPER"
 
+-- Keep Kitty tiled even when it restores a cached maximized window state.
+hl.window_rule({
+	name = "kitty-suppress-maximize",
+	match = { class = "^(kitty)$" },
+	suppress_event = "maximize",
+})
+
 -------------------
 ---- AUTOSTART ----
 -------------------
@@ -95,13 +102,13 @@ hl.config({
 		rounding = 3,
 		rounding_power = 2,
 		active_opacity = 1.0,
-		inactive_opacity = 0.8,
+		inactive_opacity = 0.9,
 
 		shadow = {
 			enabled = true,
 			range = 4,
 			render_power = 3,
-			color = 0xee1a1a1a,
+			color = "0xee1a1a1a",
 		},
 
 		blur = {
@@ -148,9 +155,9 @@ hl.config({
 		},
 	},
 
-	binds = {
-		workspace_back_and_forth = true,
-	},
+	-- binds = {
+	-- 	workspace_back_and_forth = true,
+	-- },
 
 	xwayland = {
 		force_zero_scaling = true,
