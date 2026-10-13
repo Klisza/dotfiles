@@ -59,6 +59,14 @@ hl.window_rule({
 })
 
 hl.window_rule({
+	match = {
+		class = "kitty",
+	},
+	maximize = false,
+	suppress_event = "maximize",
+})
+
+hl.window_rule({
 	name = "limit-floating-1080p",
 	match = {
 		float = true,
