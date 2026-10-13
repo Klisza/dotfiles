@@ -24,7 +24,7 @@ hl.monitor({
 
 local terminal = "kitty"
 local fileManager = "nautilus"
-local menu = "tofi-drun --drun-launch=true"
+local menu = "rofi -show drun"
 local mainMod = "SUPER"
 
 -------------------
@@ -36,6 +36,10 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("waybar")
 	hl.exec_cmd("hypridle")
 	hl.exec_cmd("hyprctl setcursor Bibata-Modern-Ice 24")
+	hl.exec_cmd(terminal, { workspace = "1 silent" })
+	hl.exec_cmd("librewolf", { workspace = "2 silent" })
+	hl.exec_cmd("keepassxc", { workspace = "9 silent" })
+	hl.exec_cmd("spotify-launcher", { workspace = "special:magic silent" })
 end)
 
 -------------------------------
@@ -59,11 +63,21 @@ hl.window_rule({
 })
 
 hl.window_rule({
+	name = "kitty-workspace-1",
 	match = {
 		class = "kitty",
 	},
+	workspace = "1",
 	maximize = false,
 	suppress_event = "maximize",
+})
+
+hl.window_rule({
+	name = "keepass-workspace-9",
+	match = {
+		class = "(org\\.keepassxc\\.KeePassXC|[Kk]ee[Pp]ass[Xx][Cc])",
+	},
+	workspace = "9",
 })
 
 hl.window_rule({

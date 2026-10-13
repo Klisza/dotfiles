@@ -216,8 +216,7 @@ ZSH_AUTOSUGGEST_STRATEGY=(histdb_top completion)
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 
-source "$HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
-
+source "/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # Tab completion
 setopt MENU_COMPLETE
