@@ -24,7 +24,7 @@ hl.monitor({
 
 local terminal = "kitty"
 local fileManager = "thunar"
-local menu = "tofi-drun --drun-launch=true"
+local menu = "rofi -show drun"
 local browser = "librewolf"
 local mainMod = "SUPER"
 
@@ -46,6 +46,10 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("waybar")
 	hl.exec_cmd("hypridle")
 	hl.exec_cmd("hyprctl setcursor Bibata-Modern-Ice 24")
+	hl.exec_cmd(terminal, { workspace = "1 silent" })
+	hl.exec_cmd(browser, { workspace = "2 silent" })
+	hl.exec_cmd("keepassxc", { workspace = "9 silent" })
+	hl.exec_cmd("spotify-launcher", { workspace = "special:magic silent" })
 end)
 
 -------------------------------
