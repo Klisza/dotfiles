@@ -18,7 +18,7 @@ esac
 ###---------------------------------------------------------------------###
 
 # Core programs
-export BROWSER="firefox"
+export BROWSER="librewolf"
 export EDITOR="nvim"
 export VISUAL="nvim"
 export CSCOPE_EDITOR="nvim"
